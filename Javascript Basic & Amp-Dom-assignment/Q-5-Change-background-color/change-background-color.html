@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color:#4A452A;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+            background-color: rgb(57, 57, 199);
+            color: white;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <button id="btn">Change BG Color</button>
+        <h2>#4A452A</h2>
+    </div>
+
+    <script>
+        let button = document.querySelector('#btn');
+        let color = ["#F08080","#FF1493","#FF4500","#BDB76B","#BC8F8F","#98FB98","#00FA9A","#20B2AA"];
+        let colorCode = document.querySelector('h2');
+        let i = 0; 
+        
+        button.addEventListener("click",
+        function(){
+            i = i < color.length ? ++i :0;
+            document.querySelector('.box').style.backgroundColor = color[i];
+            
+        });
+        button.addEventListener('click',() =>{
+            let colorName = '#';
+            colorName = Math.random().toString(16).slice(2,8);
+            colorCode.innerHTML = color[i];
+            console.log(colorName);
+
+        });
+    </script>
+</body>
+</html>

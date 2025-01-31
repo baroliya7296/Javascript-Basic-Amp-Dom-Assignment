@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .result-box{
+            border: 3px solid black;
+            padding: 20px;
+            width: fit-content;
+            text-align: center;
+            margin: 0 auto; 
+        }
+        h2{
+            background-color: rgb(79, 79, 199);
+            padding: 10px;
+            color: white;
+        }
+        input{
+            margin: 5px;
+            padding: 5px;
+            width: 150px;
+        }
+        button{
+            background-color: rgb(61, 61, 233);
+            border-radius: 24px;
+            padding: 5px;
+            font-size: 18px;
+            color: white;
+            width: 100px;
+            border: 1px solid black;
+            margin: 10px 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Marksheet For Information Technology</h2>
+        <h4>Enter Marks</h4>
+    <form>
+      1:- Gujarati :-
+    <input type="number" name="" id="mark1" placeholder="Enter your mark">
+    <br>
+      2:- Hindi:-
+    <input type="number" name="" id="mark2" placeholder="Enter your mark">
+    <br>
+      3:- English:-
+    <input type="number" name="" id="mark3" placeholder="Enter your mark">
+    <br>
+      4:- Sociology:-
+    <input type="number" name="" id="mark4" placeholder="Enter your mark">
+    <br>
+      5:- Scince:-
+    <input type="number" name="" id="mark5" placeholder="Enter your mark">
+    <br>
+      6:- Maths:-
+    <input type="number" name="" id="mark6" placeholder="Enter your mark">
+    <br>
+      7:- Sanskrit:-
+    <input type="number" name="" id="mark7" placeholder="Enter your mark">
+    <br>
+</form>
+        <button type="button" onclick="calculateResult ()">Result</button>
+        <br>
+<p id="total">Total Marks:-</p>
+<p id="percentage">Percentage:-</p>
+        <!-- <label for="total">Total is:-</label>
+        <input type="text" name="" id="total" placeholder="Show here to your total" readonly>
+        
+        <label for="percentage">percentage is:-</label>
+        <input type="text" name="" id="percentage" placeholder="Show here to your total" readonly > -->
+    </div>
+
+    <script>
+
+        function calculateResult (){
+             var a = Number(document.getElementById("mark1").value);
+             var b = Number(document.getElementById("mark2").value);
+             var c = Number(document.getElementById("mark3").value);
+             var d = Number(document.getElementById("mark4").value);
+             var e = Number(document.getElementById("mark5").value);
+             var f = Number(document.getElementById("mark6").value);
+             var g = Number(document.getElementById("mark7").value);
+
+             var total = a+b+c+d+e+f+g;
+             var perc = (total*100/700);
+
+             document.getElementById("total").innerHTML="Total Marks:- "+total+"/700";
+             document.getElementById("percentage").innerHTML="Percentage:- "+perc+"%";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
